@@ -626,6 +626,7 @@ function(core, material, Arcball, util, sv){
             texture: 0
         });
         plane.draw(pano_shader);
+        console.log('transform computed in main.js:', pano_orientation.toMat4().mul(new core.Mat4().rotate(pano_heading + Math.PI / 2, 0,0,1)));
     }
     var start_time = Date.now();
 
